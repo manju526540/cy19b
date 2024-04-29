@@ -1,0 +1,188 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-04-23T00:39:29.423Z",
+    "end": "2024-04-23T00:39:39.066Z",
+    "duration": 9643,
+    "testsRegistered": 5,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 4,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "ffc57408-3bea-4183-a26a-83d2f135e7cd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\alert1.cy.js",
+      "file": "cypress\\e2e\\alert1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "click2",
+          "fullTitle": "click2",
+          "timedOut": null,
+          "duration": 6422,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n  \"value\": \"cypress\\\\e2e\\\\alert1.cy.js\"\n}",
+          "code": "cy.on(\"uncaught:exception\", () => {\n  return false;\n});\ncy.contains(\"Click me\").click();\ncy.on(\"window:alert\", alert => {\n  expect(alert).to.equal(\"This alert appeared after 5 seconds\");\n  return true;\n});",
+          "err": {
+            "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > c(...).setup is not a function\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+            "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > c(...).setup is not a function\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at Object.b [as success] (https://cdn.ad.plus/player/adplus.js:426:85)\n    at l (https://cdn.ad.plus/player/adplus.js:313:342)\n    at Object.fireWith [as resolveWith] (https://cdn.ad.plus/player/adplus.js:315:82)\n    at d (https://cdn.ad.plus/player/adplus.js:389:157)\n    at XMLHttpRequest.<anonymous> (https://cdn.ad.plus/player/adplus.js:398:389)",
+            "diff": null
+          },
+          "uuid": "a9465042-9361-4e85-8e2f-28337650d68d",
+          "parentUUID": "ffc57408-3bea-4183-a26a-83d2f135e7cd",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "click3 ok",
+          "fullTitle": "click3 ok",
+          "timedOut": null,
+          "duration": 0,
+          "state": "skipped",
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.on(\"uncaught:exception\", () => {\n  return false;\n});\ncy.contains(\"Click me\").click;\ncy.on(\"window:alert\", alert => {\n  expect(alert).to.equal(\"Do you confirm action?\");\n  return true;\n});",
+          "err": {},
+          "uuid": "5615829c-c5d2-4667-90fd-c519e7eab06d",
+          "parentUUID": "ffc57408-3bea-4183-a26a-83d2f135e7cd",
+          "isHook": false,
+          "skipped": true
+        },
+        {
+          "title": "click3 cancel",
+          "fullTitle": "click3 cancel",
+          "timedOut": null,
+          "duration": 0,
+          "state": "skipped",
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.on(\"uncaught:exception\", () => {\n  return false;\n});\ncy.contains(\"Click me\").click;\ncy.on(\"window:alert\", alert => {\n  expect(alert).to.equal(\"Do you confirm action?\");\n  return false;\n});",
+          "err": {},
+          "uuid": "3adef961-8240-46c5-8fdb-2c3f3d562f02",
+          "parentUUID": "ffc57408-3bea-4183-a26a-83d2f135e7cd",
+          "isHook": false,
+          "skipped": true
+        },
+        {
+          "title": "prompt alert ok",
+          "fullTitle": "prompt alert ok",
+          "timedOut": null,
+          "duration": 0,
+          "state": "skipped",
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.on(\"uncaught:exception\", () => {\n  return false;\n});\ncy.window().then($win => {\n  cy.stub($win, \"prompt\").returns(\"manju c\");\n  cy.contains(\"Click me\").click();\n});\nit('prompt alert cancel', () => {\n  cy.on(\"uncaught:exception\", () => {\n    return false;\n  });\n  cy.window().then($win => {\n    cy.stub($win, \"prompt\").callsFake(() => null);\n    cy.contains(\"Click me\").click();\n  });\n});",
+          "err": {},
+          "uuid": "47f1c546-e965-4900-aa2e-b5212ff8c86c",
+          "parentUUID": "ffc57408-3bea-4183-a26a-83d2f135e7cd",
+          "isHook": false,
+          "skipped": true
+        }
+      ],
+      "suites": [
+        {
+          "uuid": "ae8a1367-eff3-46b1-baec-c583a91c8111",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Click Button to see alert",
+              "fullTitle": "template spec Click Button to see alert",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cy.on('uncaught:exception', () => {\n  return false;\n});\ncy.contains(\"Click me\").click();\ncy.on(\"window:alert\", alert => {\n  expect(alert).to.equal(\"You clicked a button\");\n  return true;\n});",
+              "err": {},
+              "uuid": "4f16a7c1-1bfb-4747-898a-2107256f31bf",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "4f16a7c1-1bfb-4747-898a-2107256f31bf"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [
+        "a9465042-9361-4e85-8e2f-28337650d68d"
+      ],
+      "pending": [],
+      "skipped": [
+        "5615829c-c5d2-4667-90fd-c519e7eab06d",
+        "3adef961-8240-46c5-8fdb-2c3f3d562f02",
+        "47f1c546-e965-4900-aa2e-b5212ff8c86c"
+      ],
+      "duration": 6422,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

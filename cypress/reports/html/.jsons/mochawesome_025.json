@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-04-23T01:20:02.883Z",
+    "end": "2024-04-23T01:20:55.202Z",
+    "duration": 52319,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0ba11776-fea0-4d88-99f6-8627e3092239",
+      "title": "",
+      "fullFile": "cypress\\e2e\\add employ.cy.js",
+      "file": "cypress\\e2e\\add employ.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2dba03d4-8bd1-411e-8c46-7ba3bd1ef395",
+          "title": "verify the add employe in pim module",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify the login with verified creds",
+              "fullTitle": "verify the add employe in pim module verify the login with verified creds",
+              "timedOut": null,
+              "duration": 52195,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n  \"value\": \"cypress\\\\e2e\\\\add employ.cy.js\"\n}",
+              "code": "cy.visit(\"/web/index.php/auth/login\");\ncy.manju(\"Admin\", \"admin123\");\nfor (let iteams in menuiteams) {\n  cy.contains(menuiteams[iteams]).should('be.visible');\n}\ncy.contains(_dashboardPo.default.Timendwork()).should(\"be.visible\");\ncy.contains(_dashboardPo.default.Pimmenuiteam()).click();\ncy.contains('Add Employee').click();\ncy.addemployee(\"manju\", \"c\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find content: 'Successfully Saved' but never did.",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find content: 'Successfully Saved' but never did.\n    at Context.eval (webpack://cypress-19-batch/./cypress/support/commands.js:49:50)",
+                "diff": null
+              },
+              "uuid": "a4e89050-47fa-4670-8db4-4006349745f2",
+              "parentUUID": "2dba03d4-8bd1-411e-8c46-7ba3bd1ef395",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a4e89050-47fa-4670-8db4-4006349745f2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 52195,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

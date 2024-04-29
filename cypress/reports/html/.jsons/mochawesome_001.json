@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-04-23T00:37:26.399Z",
+    "end": "2024-04-23T00:38:11.011Z",
+    "duration": 44612,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cbfd9b1b-4cff-46d1-a051-7f65c4ee8659",
+      "title": "",
+      "fullFile": "cypress\\e2e\\addemployee 1 .cy.js",
+      "file": "cypress\\e2e\\addemployee 1 .cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "84eccd71-efe3-413e-b9a6-3a4ddce50ab2",
+          "title": "verify the add employee in pim module",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify the login with creds",
+              "fullTitle": "verify the add employee in pim module verify the login with creds",
+              "timedOut": null,
+              "duration": 44526,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n  \"value\": \"cypress\\\\e2e\\\\addemployee 1 .cy.js\"\n}",
+              "code": "cy.visit('/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type(\"admin\");\ncy.get('input[placeholder=\"Password\"]').type(\"admin123\");\ncy.get('button[type=\"submit\"]').click();\nfor (let iteams in menuiteams) {\n  cy.contains(menuiteams[iteams]).should(\"be.visible\");\n}",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input[placeholder=\"Password\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input[placeholder=\"Password\"]`, but never found it.\n    at Context.eval (webpack://cypress-19-batch/./cypress/e2e/addemployee 1 .cy.js:19:7)",
+                "diff": null
+              },
+              "uuid": "6867a338-0c78-4656-b0d3-bd92ffe62f78",
+              "parentUUID": "84eccd71-efe3-413e-b9a6-3a4ddce50ab2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6867a338-0c78-4656-b0d3-bd92ffe62f78"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 44526,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

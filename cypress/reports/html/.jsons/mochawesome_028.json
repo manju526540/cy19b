@@ -1,0 +1,188 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-04-23T01:22:42.291Z",
+    "end": "2024-04-23T01:22:43.284Z",
+    "duration": 993,
+    "testsRegistered": 5,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 4,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "eab0299e-30d0-4b8b-8c9e-46f5b00ea4b9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\alert1.cy.js",
+      "file": "cypress\\e2e\\alert1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "click2",
+          "fullTitle": "click2",
+          "timedOut": null,
+          "duration": 887,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n  \"value\": \"cypress\\\\e2e\\\\alert1.cy.js\"\n}",
+          "code": "cy.on(\"uncaught:exception\", () => {\n  return false;\n});\ncy.contains(\"Click me\").click();\ncy.on(\"window:alert\", alert => {\n  expect(alert).to.equal(\"This alert appeared after 5 seconds\");\n  return true;\n});",
+          "err": {
+            "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://demoqa.com/alerts\n\nThe response we received from your web server was:\n\n  > 502: Bad Gateway\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+            "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://demoqa.com/alerts\n\nThe response we received from your web server was:\n\n  > 502: Bad Gateway\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:130958:76)\n    at visitFailedByErr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:130372:12)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:130941:13)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-19-batch/./cypress/e2e/alert1.cy.js:2:5)",
+            "diff": null
+          },
+          "uuid": "47643c33-60ff-4eea-b549-4574eeaf8e35",
+          "parentUUID": "eab0299e-30d0-4b8b-8c9e-46f5b00ea4b9",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "click3 ok",
+          "fullTitle": "click3 ok",
+          "timedOut": null,
+          "duration": 0,
+          "state": "skipped",
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.on(\"uncaught:exception\", () => {\n  return false;\n});\ncy.contains(\"Click me\").click;\ncy.on(\"window:alert\", alert => {\n  expect(alert).to.equal(\"Do you confirm action?\");\n  return true;\n});",
+          "err": {},
+          "uuid": "fcab7f23-717c-4587-9d35-08c472cdae44",
+          "parentUUID": "eab0299e-30d0-4b8b-8c9e-46f5b00ea4b9",
+          "isHook": false,
+          "skipped": true
+        },
+        {
+          "title": "click3 cancel",
+          "fullTitle": "click3 cancel",
+          "timedOut": null,
+          "duration": 0,
+          "state": "skipped",
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.on(\"uncaught:exception\", () => {\n  return false;\n});\ncy.contains(\"Click me\").click;\ncy.on(\"window:alert\", alert => {\n  expect(alert).to.equal(\"Do you confirm action?\");\n  return false;\n});",
+          "err": {},
+          "uuid": "5a9a73c3-98fb-455d-be6e-df845a69a029",
+          "parentUUID": "eab0299e-30d0-4b8b-8c9e-46f5b00ea4b9",
+          "isHook": false,
+          "skipped": true
+        },
+        {
+          "title": "prompt alert ok",
+          "fullTitle": "prompt alert ok",
+          "timedOut": null,
+          "duration": 0,
+          "state": "skipped",
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.on(\"uncaught:exception\", () => {\n  return false;\n});\ncy.window().then($win => {\n  cy.stub($win, \"prompt\").returns(\"manju c\");\n  cy.contains(\"Click me\").click();\n});\nit('prompt alert cancel', () => {\n  cy.on(\"uncaught:exception\", () => {\n    return false;\n  });\n  cy.window().then($win => {\n    cy.stub($win, \"prompt\").callsFake(() => null);\n    cy.contains(\"Click me\").click();\n  });\n});",
+          "err": {},
+          "uuid": "58ad1eb5-ed19-4daf-9014-d474d2f885d1",
+          "parentUUID": "eab0299e-30d0-4b8b-8c9e-46f5b00ea4b9",
+          "isHook": false,
+          "skipped": true
+        }
+      ],
+      "suites": [
+        {
+          "uuid": "28bfd2b6-8a31-48f4-8109-732bd01888a9",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Click Button to see alert",
+              "fullTitle": "template spec Click Button to see alert",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cy.on('uncaught:exception', () => {\n  return false;\n});\ncy.contains(\"Click me\").click();\ncy.on(\"window:alert\", alert => {\n  expect(alert).to.equal(\"You clicked a button\");\n  return true;\n});",
+              "err": {},
+              "uuid": "2ad8353d-8767-4364-90c0-eafea5e9a5ee",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "2ad8353d-8767-4364-90c0-eafea5e9a5ee"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [
+        "47643c33-60ff-4eea-b549-4574eeaf8e35"
+      ],
+      "pending": [],
+      "skipped": [
+        "fcab7f23-717c-4587-9d35-08c472cdae44",
+        "5a9a73c3-98fb-455d-be6e-df845a69a029",
+        "58ad1eb5-ed19-4daf-9014-d474d2f885d1"
+      ],
+      "duration": 887,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

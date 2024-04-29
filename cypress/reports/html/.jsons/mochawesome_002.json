@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-04-23T00:38:13.860Z",
+    "end": "2024-04-23T00:39:26.551Z",
+    "duration": 72691,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e1b6fd04-d81d-4057-8eeb-2d5ea9a6d07a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\admin.cy.js",
+      "file": "cypress\\e2e\\admin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a030ae08-55b3-493f-a917-37cce7372f7d",
+          "title": "validate for the admin functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify the job title ",
+              "fullTitle": "validate for the admin functionality verify the job title ",
+              "timedOut": null,
+              "duration": 72600,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n  \"value\": \"cypress\\\\e2e\\\\admin.cy.js\"\n}",
+              "code": "cy.visit(\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\");\ncy.wait(30000);\ncy.get('input[name=\"username\"]').type('admin');\ncy.get('input[placeholder=\"Password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Dashboard').should('be.visible');\ncy.contains('Time at Work').should('be.visible');\ncy.contains('Admin').click();\ncy.contains('Job').should(\"be.visible\");\ncy.contains('Job').click();\ncy.contains('Job Titles').click();\ncy.get('button[class=\"oxd-button oxd-button--medium oxd-button--secondary\"]').click();\nlet r = (Math.random() + 1).toString(36).substring(7);\ncy.get('#app > div.oxd-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div:nth-child(2) > input').type(\"SDET 1\" + r);\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Successfully Saved').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input[placeholder=\"Password\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input[placeholder=\"Password\"]`, but never found it.\n    at Context.eval (webpack://cypress-19-batch/./cypress/e2e/admin.cy.js:13:7)",
+                "diff": null
+              },
+              "uuid": "67a35d61-8993-44d9-8c3c-90c4de373633",
+              "parentUUID": "a030ae08-55b3-493f-a917-37cce7372f7d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "67a35d61-8993-44d9-8c3c-90c4de373633"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 72600,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
